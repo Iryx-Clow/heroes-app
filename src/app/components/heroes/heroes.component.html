@@ -1,0 +1,5 @@
+<h2 class="display-5 fw-bold">Heroes de DC y Marvel</h2>
+<hr>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <app-card *ngFor="let heroe of heroes; let i = index" [heroe]="heroe" [id]="i"></app-card>
+</div>

@@ -1,0 +1,8 @@
+<h2 class="display-5 fw-bold">Buscando: '{{ texto }}'</h2>
+<hr>
+<div *ngIf="heroes.length === 0" class="alert alert-primary" role="alert">
+  No se encontraron resultados para '{{ texto }}'
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <app-card *ngFor="let heroe of heroes; let i = index" [heroe]="heroe" [id]="i"></app-card>
+</div>

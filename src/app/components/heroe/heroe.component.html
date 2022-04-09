@@ -1,0 +1,19 @@
+<h2>{{ heroe.nombre }} <small>({{ heroe.casa }})</small></h2>
+<h3 class="text-muted">Fecha de aparición: {{ heroe.aparicion | date:'MM - yyyy' }}</h3>
+<hr>
+<div class="row">
+  <div class="col-md-4">
+    <img class="img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="d-grid gap-2">
+      <a class="btn btn-info" [routerLink]="['/heroes']">Regresar...</a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h3>{{ heroe.nombre }}</h3>
+    <p>
+      {{ heroe.bio }}
+    </p>
+    <img *ngIf="heroe.casa === 'Marvel'" src="assets/img/marvel-logo.png" alt="Marvel logo" width="200">
+    <img *ngIf="heroe.casa === 'DC'" src="assets/img/dc-logo.jpg" alt="DC logo" width="200">
+  </div>
+</div>

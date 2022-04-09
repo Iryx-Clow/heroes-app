@@ -1,0 +1,11 @@
+<div class="col">
+  <div class="card text-dark bg-light" style="width: 18rem;">
+    <img [src]="heroe.img" class="card-img-top" alt="Batman">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio | substring:200 }}</p>
+      <p class="card-text"><small class="text-muted">Fecha de aparicion: {{ heroe.aparicion | date:'yyyy' }}</small></p>
+      <a [routerLink]="['/heroe', id]" class="btn btn-primary">Saber más...</a>
+    </div>
+  </div>
+</div>
